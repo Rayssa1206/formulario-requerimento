@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscrição nos jogos escolares</title>
+</head>
+<body>
+<header>
+<h1>Inscrição nos jogos escolares</h1>
+Preencha os campos abaixo com suas informações.
+</header>
+<main>
+<form id="inscrição-jogos" action="/inscrições-jogos" method="post" enctype="multipart/form-data">
+   <fieldset>
+     <legend>1. Identificação do atleta</legend>
+      <label for="nome-atleta">Nome completo do atleta (obrigatório)</label>
+<input type="text" id="nome-atleta" name="nome_atleta" required><br><br>
+ <label for="nome-social">Nome social</label>
+      <input type="text" id="nome-social" name="nome_social" required><br><br>
+       <label for="nome-Matrícula">Matrícula (Obrigatório)</label>
+      <input type="text" id="nome-Matrícula" name="nome_Matrícula" required><br><br>
+        <label for="data-nascimento">Data de nascimento</label>
+      <input type="date" id="data-nasc" name="data_nascimento" required><br><br>
+      <label for="email-atleta"> Email de contato (Obrigatório)</label>
+  <input type="email" id="email-atleta" name="email_atleta" required><br><br>
+       <label for="telefone">Telefone de contato</label>
+  <input type="tel" id="telefone" name="telefone" required><br><br>
+       <label for="site-escola">Site da escola</label>
+  <input type="url" id="site-escole" name="site_escola" value="https://escola.exemplo">
+   </fieldset>
+   
+    <fieldset>
+    <legend>2. Escola e delegação</legend>
+      <label for="escola-origem">Escola de origem</label>
+  <select id="escola-origem" name="escola_origem" >
+     <option value="Escola Aurora">Escola Aurora</option>
+      <option value="Escola Gomes">Escola Gomes</option>
+      <option value="Escola Ferreira">Escola Ferreira</option>
+  </select><br></br>
+       
+      <label for="turma">Turma</label>
+  <select id="turma" name="turma" >
+     <option value="1° Ano">1° Ano</option>
+      <option value="2° Ano">2° Ano</option>
+      <option value="3° Ano">3° Ano</option>
+  </select><br></br>
+   
+  <label for="equipe">Nome da equipe</label>
+<input type="text" id="equipe" name="equipe" value="Equipe Horizonte"><br></br>
 
+      <label for="prof-resp">Professor responsável</label>
+  <input type="text" id="prof-resp" name="prof-resp" required><br><br>
+
+    <label for="tel-resp">Telefone do professor</label>
+  <input type="tel" id="tel-resp" name="tel-resp" required><br><br>
+  </fieldset>
+   <fieldset>
+       <legend>3. Participação dos jogos</legend>
+                <label for="modalidade_principal">Modalidade principal (obrigatória)</label>
+                <select id="modalidade_principal" name="modalidade_principal" required>
+                    <option value="" disabled selected>Selecione uma modalidade</option>
+                </select>
+            <fieldset>
+                <legend>Turno de preferência</legend>
+                <label><input type="radio" name="turno" value="manha"> Manhã</label>
+                <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+                <label><input type="radio" name="turno" value="noite"> Noite</label>
+            </fieldset>
+            <fieldset>
+                <legend>Modalidades de interesse (permite várias escolhas)</legend>
+                <label><input type="checkbox" name="modalidades" value="futsal"> Futsal</label>
+                <label><input type="checkbox" name="modalidades" value="voleibol"> Voleibol</label>
+                <label><input type="checkbox" name="modalidades" value="basquetebol"> Basquetebol</label>
+                <label><input type="checkbox" name="modalidades" value="handebol"> Handebol</label>
+                <label><input type="checkbox" name="modalidades" value="atletismo"> Atletismo</label>
+                <label><input type="checkbox" name="modalidades" value="natacao"> Natação</label>
+                <label><input type="checkbox" name="modalidades" value="xadrez"> Xadrez</label>
+                <label><input type="checkbox" name="modalidades" value="tenis_mesa"> Tênis de mesa</label>
+            </fieldset>
+         
+                <label for="tamanho_camiseta">Tamanho da camiseta</label><br>
+                <select id="tamanho_camiseta" name="tamanho_camiseta">
+                    <option value="" disabled selected>Selecione um tamanho</option>
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+          
+            <fieldset>
+                <legend>Participação em atividades complementares</legend>
+                <label><input type="checkbox" name="atividades" value="cerimonia" checked> Cerimônia de abertura</label><br>
+                <label><input type="checkbox" name="atividades" value="arbitragem"> Oficina de arbitragem</label><br>
+                <label><input type="checkbox" name="atividades" value="organizacao"> Organização das equipes</label>
+            </fieldset>
+         
+                <label for="quantidade_acompanhantes">Quantidade de acompanhantes</label><br>
+                <input type="number" id="quantidade_acompanhantes" name="quantidade_acompanhantes" value="2">
+      
+        </fieldset>
+        <fieldset>
+          <legend>4. Preparação e disponibilidade</legend>
+            <p>
+                <label for="mes_inicio">Mês de início da preparação</label><br>
+                <input type="month" id="mes_inicio" name="mes_inicio">
+            </p>
+            <p>
+                <label for="semana_treinamento">Semana de treinamento</label><br>
+                <input type="week" id="semana_treinamento" name="semana_treinamento">
+            </p>
+            <p>
+                <label for="horario_chegada">Horário previsto de chegada</label><br>
+                <input type="time" id="horario_chegada" name="horario_chegada">
+            </p>
+            <p>
+                <label for="data_hora_retirada">Data e hora local para retirada do kit</label><br>
+                <input type="datetime-local" id="data_hora_retirada" name="data_hora_retirada">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>5. Preferências, anexo e observações</legend>
+            <p>
+                <label for="cor_delegacao">Cor da delegação</label><br>
+                <input type="color" id="cor_delegacao" name="cor_delegacao" value="#0056b3">
+            </p>
+            <p>
+                <label for="interesse_atividades">Interesse nas atividades complementares, de 0 a 100</label><br>
+                <input type="range" id="interesse_atividades" name="interesse_atividades" min="0" max="100">
+            </p>
+            <p>
+                <label for="documento_ficticio">Documento fictício</label><br>
+                <input type="file" id="documento_ficticio" name="documento_ficticio">
+            </p>
+            <p>
+                <label for="observacoes">Observações para a organização</label><br>
+                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+            </p>
+        </fieldset>
+        <p>
+            <button type="submit">Enviar Inscrição</button>
+        </p>
+    </form>
+</body>
+  </html>
